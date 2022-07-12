@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 8080;
 
-const uri = process.env.DB_URL;
+const uri = "mongodb+srv://adimas:adimas@cluster0.doyjyta.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
